@@ -21,22 +21,49 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/13580194/NiViewIoT'
+  s.homepage         = 'https://github.com/psven/NiViewIoT'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '13580194' => 'pengshipeng@niceviewer.com' }
-  s.source           = { :git => 'https://github.com/13580194/NiViewIoT.git', :tag => s.version.to_s }
+  s.author           = { 'psven' => 'onthewayjoey@gmail.com' }
+  s.source           = { :git => 'https://github.com/psven/NiViewIoT.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'NiViewIoT/Classes/**/*'
   
+  s.static_framework = true
+  s.libraries     = 'c++'#,'z','bz2','iconv'
+  s.frameworks    = 'AudioToolbox','VideoToolbox','CoreMedia'
+  
+  # 导入 .a 静态库
+  s.vendored_libraries = "NiViewIoT/SDK/IVKit/**/*.a"
+
+  # 导入 .framework
+  s.vendored_frameworks = "NiViewIoT/SDK/IVKit/**/*.framework"
+
+  # 导入头文件
+  s.preserve_paths = "NiViewIoT/SDK/IVKit/**/*.h"
+
+  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)/#{s.name}/SDK/Frameworks" }
+  s.xcconfig = { "CLANG_CXX_LANGUAGE_STANDARD" => "c++11", "CLANG_CXX_LIBRARY" => "libc++" }
+
+  
+#  s.dependency 'TIoTLinkKit', :path => 'NiViewIoT/SDK/IoT_2'
+#  s.dependency 'TIoTLinkKit/LinkRTC', :path => 'NiViewIoT/SDK/IoT_2'
+#  s.dependency 'TIoTLinkVideo', '2.4.40'
+#  s.dependency 'TIoTLinkKit_GVoiceSE', '1.0.7'
+#  s.dependency 'TIoTLinkKit_IJKPlayer', '2.0.13'
+
   # s.resource_bundles = {
   #   'NiViewIoT' => ['NiViewIoT/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  
+  s.dependency 'Alamofire',              '~> 5.4.4'
+  s.dependency 'CryptoSwift',            '~> 1.0'
+  s.dependency 'AFNetworking'
+  s.dependency 'HandyJSON'
 end

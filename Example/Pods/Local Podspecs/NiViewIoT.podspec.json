@@ -1,0 +1,50 @@
+{
+  "name": "NiViewIoT",
+  "version": "0.1.0",
+  "summary": "A short description of NiViewIoT.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/13580194/NiViewIoT",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "13580194": "pengshipeng@niceviewer.com"
+  },
+  "source": {
+    "git": "https://github.com/13580194/NiViewIoT.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "source_files": "NiViewIoT/Classes/**/*",
+  "static_framework": true,
+  "libraries": "c++",
+  "frameworks": [
+    "AudioToolbox",
+    "VideoToolbox",
+    "CoreMedia"
+  ],
+  "vendored_libraries": "NiViewIoT/SDK/IVKit/**/*.a",
+  "vendored_frameworks": "NiViewIoT/SDK/IVKit/**/*.framework",
+  "preserve_paths": "NiViewIoT/SDK/IVKit/**/*.h",
+  "xcconfig": {
+    "CLANG_CXX_LANGUAGE_STANDARD": "c++11",
+    "CLANG_CXX_LIBRARY": "libc++"
+  },
+  "dependencies": {
+    "Alamofire": [
+      "~> 5.4.4"
+    ],
+    "CryptoSwift": [
+      "~> 1.0"
+    ],
+    "AFNetworking": [
+
+    ],
+    "HandyJSON": [
+
+    ]
+  }
+}

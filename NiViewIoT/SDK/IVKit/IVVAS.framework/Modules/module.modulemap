@@ -1,0 +1,6 @@
+framework module IVVAS {
+  umbrella header "IVVAS.h"
+
+  export *
+  module * { export * }
+}

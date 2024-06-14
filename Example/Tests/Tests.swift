@@ -1,5 +1,5 @@
 import XCTest
-import NiViewIoT
+//import NiViewIoT
 
 class Tests: XCTestCase {
     

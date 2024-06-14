@@ -1,0 +1,57 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - Alamofire (5.4.4)
+  - CryptoSwift (1.8.1)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - HandyJSON (5.0.2)
+  - NiViewIoT (0.1.0):
+    - AFNetworking
+    - Alamofire (~> 5.4.4)
+    - CryptoSwift (~> 1.0)
+    - HandyJSON
+
+DEPENDENCIES:
+  - FBSnapshotTestCase (~> 2.1.4)
+  - NiViewIoT (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - Alamofire
+    - CryptoSwift
+    - FBSnapshotTestCase
+    - HandyJSON
+
+EXTERNAL SOURCES:
+  NiViewIoT:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  CryptoSwift: b9c701d6f5011df23794dbf7f2e480a77835d83d
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  NiViewIoT: 2679b902275b3636de76389cd3089025dd7ab194
+
+PODFILE CHECKSUM: 575c7271bca53d0125a1aaeadb88baeb227ab86f
+
+COCOAPODS: 1.15.2

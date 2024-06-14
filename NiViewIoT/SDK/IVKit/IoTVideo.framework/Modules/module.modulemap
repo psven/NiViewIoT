@@ -1,0 +1,6 @@
+framework module IoTVideo {
+  umbrella header "IoTVideo.h"
+  export *
+
+  module * { export * }
+}

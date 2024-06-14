@@ -1,0 +1,6 @@
+framework module NiViewIoT {
+  umbrella header "NiViewIoT-umbrella.h"
+
+  export *
+  module * { export * }
+}
